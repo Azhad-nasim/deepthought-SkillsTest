@@ -44,6 +44,10 @@
       "last 1 safari version"
     ]
   },
+  "description": "Its a Reactjs Project",
+  "main": "app.js",
+  "author": "Azhad Nasim",
+  "license": "ISC",
   "devDependencies": {
     "gh-pages": "^5.0.0"
   }
