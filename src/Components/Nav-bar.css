@@ -1,0 +1,82 @@
+/* NAVBAR STYLING STARTS */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 50px;
+  flex-shrink: 0;
+  background: #f0f0f0;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+/* LOGO */
+.logo {
+  position: relative;
+  left: 3rem;
+  font-size: 32px;
+}
+
+/* NAVBAR MENU */
+.menu {
+  display: flex;
+  gap: 10px;
+  font-size: 20px;
+}
+.menu2 {
+  display: none;
+}
+.menu li:hover {
+  cursor: pointer;
+}
+
+.menu li {
+  padding: 5px 10px;
+}
+/* CHECKBOX HACK */
+
+input[type="checkbox"] {
+  display: none;
+}
+
+/* HAMBURGER MENU */
+.hamburger {
+  display: none;
+  font-size: 24px;
+  user-select: none;
+}
+/* APPLYING MEDIA QUERIES */
+@media (max-width: 572px) {
+  .menu2 {
+    display: none;
+    position: absolute;
+    background-color: teal;
+    right: 0;
+    left: 0;
+    text-align: center;
+    padding: 22px 0;
+  }
+  .menu {
+    display: none;
+  }
+
+  .menu2 li:hover {
+    display: inline-block;
+    background-color: #4c9e9e;
+    border-radius: 100%;
+    transition: 0.3s ease;
+    cursor: pointer;
+  }
+
+  .menu2 li + li {
+    margin-top: 12px;
+  }
+  /* not want to show the nav  */
+  input[type="checkbox"]:checked ~ .me {
+    display: block;
+    position: absolute;
+  }
+
+  .hamburger {
+    display: block;
+  }
+}
